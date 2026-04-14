@@ -5,21 +5,21 @@
 class Micdetector < Formula
   desc "Publishes macOS microphone and camera status over MQTT"
   homepage "https://github.com/gerco/MicDetector"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/gerco/MicDetector/releases/download/v0.1.1/micdetector_0.1.1_darwin_amd64.tar.gz"
-    sha256 "97d4824da617786462eb072e8e29399205d9ec692572fa04fbfe093976ccb38d"
+    url "https://github.com/gerco/MicDetector/releases/download/v0.1.2/micdetector_0.1.2_darwin_amd64.tar.gz"
+    sha256 "18f2fc6d5afede47386534627c4d222f1be06226d7f7a472f4f655481706e203"
 
     define_method(:install) do
       bin.install "micdetector"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/gerco/MicDetector/releases/download/v0.1.1/micdetector_0.1.1_darwin_arm64.tar.gz"
-    sha256 "5e36ebdee6a6d4d736c904f5e24edd365adece8244531f0751bc63ebb17d699e"
+    url "https://github.com/gerco/MicDetector/releases/download/v0.1.2/micdetector_0.1.2_darwin_arm64.tar.gz"
+    sha256 "4f6b59e5d5ec5bc5528ab1838c6dd70e9a41a6a5d0a8170d2a8341877d877c64"
 
     define_method(:install) do
       bin.install "micdetector"
@@ -28,14 +28,14 @@ class Micdetector < Formula
 
   def caveats
     <<~EOS
-      MicDetector requires microphone and camera permissions.
-      Grant access in System Settings > Privacy & Security on first run.
-
-      To configure, edit:
+      On first start, MicDetector creates a default config file at:
         ~/Library/Application Support/MicDetector/config.json
 
-      To start as a background service:
-        brew services start micdetector
+      Edit it to set your MQTT broker address, then restart:
+        brew services restart micdetector
+
+      MicDetector requires microphone and camera permissions.
+      Grant access in System Settings > Privacy & Security on first run.
 
       To view logs:
         log stream --predicate 'subsystem == "com.micdetector"' --style compact
