@@ -5,21 +5,21 @@
 class Micdetector < Formula
   desc "Publishes macOS microphone and camera status over MQTT"
   homepage "https://github.com/gerco/MicDetector"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/gerco/MicDetector/releases/download/v0.1.0/micdetector_0.1.0_darwin_amd64.tar.gz"
-    sha256 "211ed30cc9dc89d8efc187cf9581298af51a253cb4afb4609c00aeda6f7a9094"
+    url "https://github.com/gerco/MicDetector/releases/download/v0.1.1/micdetector_0.1.1_darwin_amd64.tar.gz"
+    sha256 "97d4824da617786462eb072e8e29399205d9ec692572fa04fbfe093976ccb38d"
 
     define_method(:install) do
       bin.install "micdetector"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/gerco/MicDetector/releases/download/v0.1.0/micdetector_0.1.0_darwin_arm64.tar.gz"
-    sha256 "0372901d1fd5a32c97829bb67a3c189ea958ed48002875ad2a3b7f3a941ebe33"
+    url "https://github.com/gerco/MicDetector/releases/download/v0.1.1/micdetector_0.1.1_darwin_arm64.tar.gz"
+    sha256 "5e36ebdee6a6d4d736c904f5e24edd365adece8244531f0751bc63ebb17d699e"
 
     define_method(:install) do
       bin.install "micdetector"
@@ -36,14 +36,15 @@ class Micdetector < Formula
 
       To start as a background service:
         brew services start micdetector
+
+      To view logs:
+        log stream --predicate 'subsystem == "com.micdetector"' --style compact
     EOS
   end
 
   service do
     run [opt_bin/"micdetector"]
-    keep_alive true
-    log_path var/"log/micdetector.log"
-    error_log_path var/"log/micdetector.log"
+    keep_alive successful_exit: false
   end
 
   test do
