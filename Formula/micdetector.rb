@@ -5,21 +5,21 @@
 class Micdetector < Formula
   desc "Publishes macOS microphone and camera status over MQTT"
   homepage "https://github.com/gerco/MicDetector"
-  version "0.1.3"
+  version "0.2.0-rc2"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/gerco/MicDetector/releases/download/v0.1.3/micdetector_0.1.3_darwin_amd64.tar.gz"
-    sha256 "992e34223732eb8d0681990cf10542ee95ce7a2ca5d077d300712e1389fb4f05"
+    url "https://github.com/gerco/MicDetector/releases/download/v0.2.0-rc2/micdetector_0.2.0-rc2_darwin_amd64.tar.gz"
+    sha256 "cb610a71a85924f5af12d2b74091d69e483217411a9e39559c51f042668f18ec"
 
     define_method(:install) do
       bin.install "micdetector"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/gerco/MicDetector/releases/download/v0.1.3/micdetector_0.1.3_darwin_arm64.tar.gz"
-    sha256 "e63dbe3699a4cd9d0f3d73066916e513587672cccffd6ce3a1c2ce32889d2d74"
+    url "https://github.com/gerco/MicDetector/releases/download/v0.2.0-rc2/micdetector_0.2.0-rc2_darwin_arm64.tar.gz"
+    sha256 "411e6c374fdd0a7186cbabb127fd67ee8a984591604e7014d6c834564bc36f6e"
 
     define_method(:install) do
       bin.install "micdetector"
