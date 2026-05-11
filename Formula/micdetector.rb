@@ -11,7 +11,7 @@ class Micdetector < Formula
 
   if Hardware::CPU.intel?
     url "https://github.com/gerco/MicDetector/releases/download/v0.2.0-rc2/micdetector_0.2.0-rc2_darwin_amd64.tar.gz"
-    sha256 "cb610a71a85924f5af12d2b74091d69e483217411a9e39559c51f042668f18ec"
+    sha256 "21b0712e730bd501efa430c1d9ce293fd8fdd881799c9ad47f2278012bee89a3"
 
     define_method(:install) do
       bin.install "micdetector"
@@ -19,7 +19,7 @@ class Micdetector < Formula
   end
   if Hardware::CPU.arm?
     url "https://github.com/gerco/MicDetector/releases/download/v0.2.0-rc2/micdetector_0.2.0-rc2_darwin_arm64.tar.gz"
-    sha256 "411e6c374fdd0a7186cbabb127fd67ee8a984591604e7014d6c834564bc36f6e"
+    sha256 "880b7964c2bd2c8cabc7d036a0eacf90594c8513c370bc2db47f1ddabdc6c772"
 
     define_method(:install) do
       bin.install "micdetector"
