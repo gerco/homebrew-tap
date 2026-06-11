@@ -5,13 +5,13 @@
 class Envoke < Formula
   desc "Environment secrets manager with pluggable backends"
   homepage "https://git.dries.info/gerco/Envoke"
-  version "0.2.1"
+  version "0.2.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gerco/envoke/releases/download/v0.2.1/envoke_0.2.1_darwin_amd64.tar.gz"
-      sha256 "383747c2dba0f1e408e093721b47f3bbc495231b3292e1c3990d12d5c935b6b2"
+      url "https://github.com/gerco/envoke/releases/download/v0.2.2/envoke_0.2.2_darwin_amd64.tar.gz"
+      sha256 "24ddde7ac3c275aa303048064c7d2fcb5608ff6ed7a460f5c1b33692312cd224"
 
       define_method(:install) do
         bin.install "envoke"
@@ -19,8 +19,8 @@ class Envoke < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gerco/envoke/releases/download/v0.2.1/envoke_0.2.1_darwin_arm64.tar.gz"
-      sha256 "4a619d197d9586c55bdb8be9da46a954651ce407de3af2969701a067f5550027"
+      url "https://github.com/gerco/envoke/releases/download/v0.2.2/envoke_0.2.2_darwin_arm64.tar.gz"
+      sha256 "d2ba546cbed8cc83ee19719588eb9e22f996000c932084f97ca9d89e796469f5"
 
       define_method(:install) do
         bin.install "envoke"
@@ -31,16 +31,16 @@ class Envoke < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gerco/envoke/releases/download/v0.2.1/envoke_0.2.1_linux_amd64.tar.gz"
-      sha256 "65bdc2b2b5e522f1c272fa93b126dc6a4df8e285a135ff853f53326c966f4115"
+      url "https://github.com/gerco/envoke/releases/download/v0.2.2/envoke_0.2.2_linux_amd64.tar.gz"
+      sha256 "cd65b5ed9db748e27c2e26db5a22309869bbdeb0fe8f57dd73c589940ee8e800"
       define_method(:install) do
         bin.install "envoke"
         bin.install_symlink "envoke" => "ee"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gerco/envoke/releases/download/v0.2.1/envoke_0.2.1_linux_arm64.tar.gz"
-      sha256 "5c6095a2b8775c896c9c2cbc23e836ae8521ade37fe220634374068690f68010"
+      url "https://github.com/gerco/envoke/releases/download/v0.2.2/envoke_0.2.2_linux_arm64.tar.gz"
+      sha256 "78aba20eb7c35df8b18b71113156d0b7372dbc8f547a5d014c855a21dddce3e5"
       define_method(:install) do
         bin.install "envoke"
         bin.install_symlink "envoke" => "ee"
