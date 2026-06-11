@@ -6,22 +6,22 @@ class Envoke < Formula
 
   on_macos do
     on_intel do
-      url "/envoke__darwin_amd64.tar.gz"
+      url "https://github.com/gerco/Envoke/releases/download/v0.2.5/envoke_0.2.5_darwin_amd64.tar.gz"
       sha256 ""
     end
     on_arm do
-      url "/envoke__darwin_arm64.tar.gz"
+      url "https://github.com/gerco/Envoke/releases/download/v0.2.5/envoke_0.2.5_darwin_arm64.tar.gz"
       sha256 ""
     end
   end
 
   on_linux do
     on_intel do
-      url "/envoke__linux_amd64.tar.gz"
+      url "https://github.com/gerco/Envoke/releases/download/v0.2.5/envoke_0.2.5_linux_amd64.tar.gz"
       sha256 ""
     end
     on_arm do
-      url "/envoke__linux_arm64.tar.gz"
+      url "https://github.com/gerco/Envoke/releases/download/v0.2.5/envoke_0.2.5_linux_arm64.tar.gz"
       sha256 ""
     end
   end
