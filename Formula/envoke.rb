@@ -2,27 +2,27 @@ class Envoke < Formula
   desc "Environment secrets manager with pluggable backends"
   homepage "https://github.com/gerco/Envoke"
   license "MIT"
-  version "0.6.0"
+  version "0.6.1"
 
   on_macos do
     on_intel do
-      url "https://github.com/gerco/envoke/releases/download/v0.6.0/envoke_0.6.0_darwin_amd64.tar.gz"
-      sha256 "3f7e6a8a7f782441ac5cee79e330e1adf1a013e558a873ceccedcfcbbf45484e"
+      url "https://github.com/gerco/envoke/releases/download/v0.6.1/envoke_0.6.1_darwin_amd64.tar.gz"
+      sha256 "67012ebe24e16ddeb9ce2844083701b68761cc05fc5d78f4d4fd6da5732b6542"
     end
     on_arm do
-      url "https://github.com/gerco/envoke/releases/download/v0.6.0/envoke_0.6.0_darwin_arm64.tar.gz"
-      sha256 "e31e8af6f0bf8dace55d6e3fc66a7564fa72876bb69c1d8f15c5e88720460fb0"
+      url "https://github.com/gerco/envoke/releases/download/v0.6.1/envoke_0.6.1_darwin_arm64.tar.gz"
+      sha256 "91adc3daff6a268a473fc9f06a2d306ccdc108a5ecf39ffc410676def628283f"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/gerco/envoke/releases/download/v0.6.0/envoke_0.6.0_linux_amd64.tar.gz"
-      sha256 "2bcc30682ac1c8d90efe587a8f7ea054dbdcee8190cac0af8edd970ccf5087d5"
+      url "https://github.com/gerco/envoke/releases/download/v0.6.1/envoke_0.6.1_linux_amd64.tar.gz"
+      sha256 "a6fccb9bcd7ffed9541444ca2805652c2f5501b4e38cecff8c32a8affa3043ea"
     end
     on_arm do
-      url "https://github.com/gerco/envoke/releases/download/v0.6.0/envoke_0.6.0_linux_arm64.tar.gz"
-      sha256 "5f48e21be077d93b01fa63b7e9427ea3657ae0aa209511eabf67d81891bba221"
+      url "https://github.com/gerco/envoke/releases/download/v0.6.1/envoke_0.6.1_linux_arm64.tar.gz"
+      sha256 "1c45e9629dad85e61f268ebe8afd861467f22f26705f7e98fdf93c18d04b62d7"
     end
   end
 
